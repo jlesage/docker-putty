@@ -15,7 +15,7 @@ from Jinja2 templates.
       <url>https://www.putty.org</url>
     </project>
     <unraid>
-      <support_url>https://forums.lime-technology.com/topic/73494-support-putty/</support_url>
+      <support_url>https://forums.unraid.net/topic/73494-support-putty/</support_url>
       <category>Tools:</category>
     </unraid>
     <container>
