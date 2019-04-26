@@ -8,7 +8,7 @@
 FROM jlesage/baseimage-gui:alpine-3.9-v3.5.2
 
 # Define software versions.
-ARG PUTTY_VERSION=0.70
+ARG PUTTY_VERSION=0.71
 
 # Define software download URLs.
 ARG PUTTY_URL=https://the.earth.li/~sgtatham/putty/${PUTTY_VERSION}/putty-${PUTTY_VERSION}.tar.gz
@@ -22,7 +22,6 @@ RUN \
     add-pkg --virtual build-dependencies \
         build-base \
         curl \
-        patch \
         gtk+3.0-dev \
         && \
 
@@ -31,14 +30,8 @@ RUN \
     echo "Downloading PuTTY package..." && \
     curl -# -L ${PUTTY_URL} | tar xz --strip 1  -C putty && \
 
-    echo "Downloading PuTTY patches..." && \
-    curl -# -L -o putty-1.patch "https://git.tartarus.org/?p=simon/putty.git;a=blobdiff_plain;f=unix/gtkdlg.c;h=119c428c56f8ebf9b734685bceee4877be118f37;hp=a7efd3b41b70b75c5cdb6d0a4ab3126223aff96b;hb=97a248b463d49a47418532cd5797f6ea7773a4cf;hpb=0476ceaa0848a5d4cad3edf4002ca5d973dc424b" && \
-    curl -# -L -o putty-2.patch "https://git.tartarus.org/?p=simon/putty.git;a=blobdiff_plain;f=unix/gtkwin.c;h=314db770f924e18dcb7b1383b69eade72ef898fc;hp=d170fad702543edc91ca44869e2f1cd7ea7480c2;hb=97a248b463d49a47418532cd5797f6ea7773a4cf;hpb=0476ceaa0848a5d4cad3edf4002ca5d973dc424b" && \
-
     # Compile PuTTY.
     cd putty && \
-    patch -p1 < ../putty-1.patch && \
-    patch -p1 < ../putty-2.patch && \
     ./configure \
         --prefix=/usr \
         && \
