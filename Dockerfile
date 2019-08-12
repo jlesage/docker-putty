@@ -8,7 +8,7 @@
 FROM jlesage/baseimage-gui:alpine-3.9-v3.5.2
 
 # Define software versions.
-ARG PUTTY_VERSION=0.71
+ARG PUTTY_VERSION=0.72
 
 # Define software download URLs.
 ARG PUTTY_URL=https://the.earth.li/~sgtatham/putty/${PUTTY_VERSION}/putty-${PUTTY_VERSION}.tar.gz
