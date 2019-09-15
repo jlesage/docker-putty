@@ -1,5 +1,5 @@
 # Docker container for PuTTY
-[![Docker Automated build](https://img.shields.io/docker/automated/jlesage/putty.svg)](https://hub.docker.com/r/jlesage/putty/) [![Docker Image](https://images.microbadger.com/badges/image/jlesage/putty.svg)](http://microbadger.com/#/images/jlesage/putty) [![Build Status](https://travis-ci.org/jlesage/docker-putty.svg?branch=master)](https://travis-ci.org/jlesage/docker-putty) [![GitHub Release](https://img.shields.io/github/release/jlesage/docker-putty.svg)](https://github.com/jlesage/docker-putty/releases/latest) [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypal.me/JocelynLeSage/0usd)
+[![Docker Image](https://images.microbadger.com/badges/image/jlesage/putty.svg)](http://microbadger.com/#/images/jlesage/putty) [![Build Status](https://travis-ci.org/jlesage/docker-putty.svg?branch=master)](https://travis-ci.org/jlesage/docker-putty) [![GitHub Release](https://img.shields.io/github/release/jlesage/docker-putty.svg)](https://github.com/jlesage/docker-putty/releases/latest) [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypal.me/JocelynLeSage/0usd)
 
 This is a Docker container for [PuTTY](https://www.putty.org).
 
