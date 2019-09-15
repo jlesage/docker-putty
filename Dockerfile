@@ -4,6 +4,8 @@
 # https://github.com/jlesage/docker-putty
 #
 
+ARG DOCKER_IMAGE_VERSION=unknown
+
 # Pull base image.
 FROM jlesage/baseimage-gui:alpine-3.9-v3.5.2
 
@@ -79,6 +81,6 @@ VOLUME ["/config"]
 LABEL \
       org.label-schema.name="putty" \
       org.label-schema.description="Docker container for PuTTY" \
-      org.label-schema.version="unknown" \
+      org.label-schema.version="$DOCKER_IMAGE_VERSION" \
       org.label-schema.vcs-url="https://github.com/jlesage/docker-putty" \
       org.label-schema.schema-version="1.0"
