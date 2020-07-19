@@ -11,7 +11,7 @@ FROM jlesage/baseimage-gui:alpine-3.12-v3.5.5
 ARG DOCKER_IMAGE_VERSION=unknown
 
 # Define software versions.
-ARG PUTTY_VERSION=0.73
+ARG PUTTY_VERSION=0.74
 
 # Define software download URLs.
 ARG PUTTY_URL=https://the.earth.li/~sgtatham/putty/${PUTTY_VERSION}/putty-${PUTTY_VERSION}.tar.gz
