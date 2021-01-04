@@ -27,6 +27,13 @@ from Jinja2 templates.
     <!-- Changelog of the application. -->
     <history>
       <release>
+        <version>1.1.0</version>
+        <date>2021-01-04</date>
+        <change>Added dialog window to easily restart the PuTTY session.</change>
+        <change>Updated baseimage to version 3.5.6, which brings the following changes:</change>
+        <change level="2">Other small adjustments for the YAD log monitor target.</change>
+      </release>
+      <release>
         <version>1.0.5</version>
         <date>2020-07-19</date>
         <change>Upgraded PuTTY to version 0.74.</change>
