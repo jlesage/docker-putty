@@ -70,7 +70,20 @@ from Jinja2 templates.
   </app>
   <container>
     <!-- Environment variables -->
-    <environment_variables/>
+    <environment_variables>
+      <environment_variable>
+        <name>DISABLE_RESTART_SESSION_DIALOG_WINDOW</name>
+        <description>When set to `1`, the dialog window used to restart PuTTY session is not displayed.</description>
+        <default>0</default>
+        <unraid_template>
+          <title>Disable Restart Session Dialog Window</title>
+          <description>When set to [b][i]1[/i][/b], the dialog window used to restart PuTTY session is not displayed.</description>
+          <display>advanced</display>
+          <required>false</required>
+          <mask>false</mask>
+        </unraid_template>
+      </environment_variable>
+    </environment_variables>
     <!-- Volumes -->
     <volumes/>
     <!-- Network ports -->

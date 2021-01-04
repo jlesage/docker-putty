@@ -97,6 +97,7 @@ of this parameter has the format `<VARIABLE_NAME>=<VALUE>`.
 |`VNC_PASSWORD`| Password needed to connect to the application's GUI.  See the [VNC Password](#vnc-password) section for more details. | (unset) |
 |`X11VNC_EXTRA_OPTS`| Extra options to pass to the x11vnc server running in the Docker container.  **WARNING**: For advanced users. Do not use unless you know what you are doing. | (unset) |
 |`ENABLE_CJK_FONT`| When set to `1`, open-source computer font `WenQuanYi Zen Hei` is installed.  This font contains a large range of Chinese/Japanese/Korean characters. | `0` |
+|`DISABLE_RESTART_SESSION_DIALOG_WINDOW`| When set to `1`, the dialog window used to restart PuTTY session is not displayed. | `0` |
 
 ### Data Volumes
 
