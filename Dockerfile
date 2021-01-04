@@ -51,6 +51,8 @@ RUN \
     rm -rf /tmp/* /tmp/.[!.]*
 
 # Install YAD.
+# NOTE: YAD is compiled manually because the version on the Alpine repository
+#       pulls too much dependencies.
 RUN \
     # Install packages needed by the build.
     add-pkg --virtual build-dependencies \
