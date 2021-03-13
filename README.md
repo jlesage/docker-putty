@@ -1,5 +1,5 @@
 # Docker container for PuTTY
-[![Docker Image Size](https://img.shields.io/microbadger/image-size/jlesage/putty)](http://microbadger.com/#/images/jlesage/putty) [![Build Status](https://drone.le-sage.com/api/badges/jlesage/docker-putty/status.svg)](https://drone.le-sage.com/jlesage/docker-putty) [![GitHub Release](https://img.shields.io/github/release/jlesage/docker-putty.svg)](https://github.com/jlesage/docker-putty/releases/latest) [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypal.me/JocelynLeSage/0usd)
+[![Docker Image Size](https://img.shields.io/docker/image-size/jlesage/putty/latest)](https://hub.docker.com/r/jlesage/putty/tags) [![Build Status](https://drone.le-sage.com/api/badges/jlesage/docker-putty/status.svg)](https://drone.le-sage.com/jlesage/docker-putty) [![GitHub Release](https://img.shields.io/github/release/jlesage/docker-putty.svg)](https://github.com/jlesage/docker-putty/releases/latest) [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypal.me/JocelynLeSage/0usd)
 
 This is a Docker container for [PuTTY](https://www.putty.org).
 
