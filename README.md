@@ -159,7 +159,6 @@ version: '3'
 services:
   putty:
     image: jlesage/putty
-    build: .
     ports:
       - "5800:5800"
     volumes:
