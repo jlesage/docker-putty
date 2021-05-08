@@ -11,7 +11,7 @@ FROM jlesage/baseimage-gui:alpine-3.12-v3.5.7
 ARG DOCKER_IMAGE_VERSION=unknown
 
 # Define software versions.
-ARG PUTTY_VERSION=0.74
+ARG PUTTY_VERSION=0.75
 ARG YAD_VERSION=7.3
 
 # Define software download URLs.
