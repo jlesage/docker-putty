@@ -44,7 +44,17 @@ RUN \
         --prefix=/usr \
         && \
     make && make install && \
-    strip /usr/bin/putty && \
+    strip \
+        /usr/bin/plink \
+        /usr/bin/pscp \
+        /usr/bin/psftp \
+        /usr/bin/psusan \
+        /usr/bin/puttygen \
+        /usr/bin/pageant \
+        /usr/bin/pterm \
+        /usr/bin/putty \
+        /usr/bin/puttytel \
+        && \
     cd .. && \
     # Cleanup.
     del-pkg build-dependencies && \
