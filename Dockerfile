@@ -98,7 +98,8 @@ RUN \
 
 # Install dependencies.
 RUN add-pkg \
-        gtk+3.0
+        gtk+3.0 \
+        adwaita-icon-theme
 
 # Adjust the openbox config.
 RUN \
