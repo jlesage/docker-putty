@@ -11,7 +11,7 @@ FROM jlesage/baseimage-gui:alpine-3.14-v3.5.8
 ARG DOCKER_IMAGE_VERSION=unknown
 
 # Define software versions.
-ARG PUTTY_VERSION=0.76
+ARG PUTTY_VERSION=0.77
 ARG YAD_VERSION=7.3
 
 # Define software download URLs.
@@ -26,7 +26,9 @@ RUN \
     # Install packages needed by the build.
     add-pkg --virtual build-dependencies \
         build-base \
+        cmake \
         curl \
+        perl \
         gtk+3.0-dev \
         && \
     # Set same default compilation flags as abuild.
@@ -35,27 +37,22 @@ RUN \
     export CPPFLAGS="$CFLAGS" && \
     export LDFLAGS="-Wl,--as-needed" && \
     # Download the PuTTY package.
-    mkdir putty && \
+    mkdir /tmp/putty && \
     echo "Downloading PuTTY package..." && \
-    curl -# -L ${PUTTY_URL} | tar xz --strip 1  -C putty && \
+    curl -# -L ${PUTTY_URL} | tar xz --strip 1 -C /tmp/putty && \
     # Compile PuTTY.
-    cd putty && \
-    ./configure \
-        --prefix=/usr \
-        && \
-    make && make install && \
-    strip \
-        /usr/bin/plink \
-        /usr/bin/pscp \
-        /usr/bin/psftp \
-        /usr/bin/psusan \
-        /usr/bin/puttygen \
-        /usr/bin/pageant \
-        /usr/bin/pterm \
-        /usr/bin/putty \
-        /usr/bin/puttytel \
-        && \
-    cd .. && \
+    ( \
+        mkdir /tmp/putty/build && \
+        cd /tmp/putty/build && \
+        cmake \
+            -DCMAKE_BUILD_TYPE=Release \
+            -DCMAKE_INSTALL_PREFIX=/usr \
+            .. \
+    ) && \
+    make -C /tmp/putty/build -j$(nproc)&& \
+    DESTDIR=/tmp/putty-install make -C /tmp/putty/build install && \
+    strip /tmp/putty-install/usr/bin/* && \
+    cp -av /tmp/putty-install/usr/bin/* /usr/bin/ && \
     # Cleanup.
     del-pkg build-dependencies && \
     rm -rf /tmp/* /tmp/.[!.]*
@@ -89,7 +86,8 @@ RUN \
         --disable-html \
         --disable-pfd \
         && \
-    make && make install && \
+    make -j $(nproc) && \
+    make install && \
     strip /usr/bin/yad && \
     cd .. && \
     # Cleanup.
