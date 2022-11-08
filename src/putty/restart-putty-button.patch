@@ -1,0 +1,69 @@
+Implement a "Restart PuTTY session" button.  This button sits at the top of the
+terminal window.
+--- a/unix/window.c	2022-11-07 22:43:12.703088650 -0500
++++ b/unix/window.c	2022-11-08 14:31:11.286951866 -0500
+@@ -90,6 +90,10 @@
+     gboolean drawing_area_got_size, drawing_area_realised;
+     gboolean drawing_area_setup_needed;
+     bool drawing_area_setup_called;
++#if 1 // RESTART_PUTTY_BUTTON
++    GtkBox *vbox;
++    GtkWidget *restartsessionbtn;
++#endif
+     GtkBox *hbox;
+     GtkAdjustment *sbar_adjust;
+     GtkWidget *menu, *specialsmenu, *specialsitem1, *specialsitem2,
+@@ -2348,6 +2352,14 @@
+         gtk_widget_destroy(inst->window);
+ }
+ 
++#if 1 // RESTART_PUTTY_BUTTON
++void restart_putty_session_button_clicked(GtkWidget *widget, gpointer data)
++{
++    g_print("Restarting PuTTY...\n");
++    system("/usr/bin/restart_putty.sh");
++}
++#endif
++
+ static void exit_callback(void *vctx)
+ {
+     GtkFrontend *inst = (GtkFrontend *)vctx;
+@@ -5385,7 +5402,27 @@
+     if (!conf_get_bool(inst->conf, CONF_scrollbar_on_left))
+         gtk_box_pack_start(inst->hbox, inst->sbar, false, false, 0);
+ 
++#if 1 // RESTART_PUTTY_BUTTON
++    /* Create the button. */
++    inst->restartsessionbtn = gtk_button_new_with_label("Restart PuTTY session");
++    g_object_set(inst->restartsessionbtn, "halign", GTK_ALIGN_END, NULL);
++    g_object_set(inst->restartsessionbtn, "margin-top", 10, NULL);
++    g_object_set(inst->restartsessionbtn, "margin-bottom", 10, NULL);
++    g_object_set(inst->restartsessionbtn, "margin-right", 25, NULL);
++    gtk_widget_show(GTK_WIDGET(inst->restartsessionbtn));
++
++    /* Create the vertical box. */
++    inst->vbox = GTK_BOX(gtk_vbox_new(false, 0));
++    gtk_box_pack_start(inst->vbox, inst->restartsessionbtn, false, false, 0);
++    gtk_box_pack_start(inst->vbox, inst->hbox, true, true, 0);
++    gtk_widget_show(GTK_WIDGET(inst->vbox));
++#endif
++
++#if 1 // RESTART_PUTTY_BUTTON
++    gtk_container_add(GTK_CONTAINER(inst->window), GTK_WIDGET(inst->vbox));
++#else
+     gtk_container_add(GTK_CONTAINER(inst->window), GTK_WIDGET(inst->hbox));
++#endif
+ 
+     gtk_widget_show(inst->area);
+     show_scrollbar(inst, conf_get_bool(inst->conf, CONF_scrollbar));
+@@ -5492,6 +5529,10 @@
+     g_signal_connect(G_OBJECT(inst->imc), "commit",
+                      G_CALLBACK(input_method_commit_event), inst);
+ #endif
++#if 1 // RESTART_PUTTY_BUTTON
++    g_signal_connect(G_OBJECT(inst->restartsessionbtn), "clicked",
++                     G_CALLBACK(restart_putty_session_button_clicked), inst);
++#endif
+     if (conf_get_bool(inst->conf, CONF_scrollbar))
+         g_signal_connect(G_OBJECT(inst->sbar_adjust), "value_changed",
+                          G_CALLBACK(scrollbar_moved), inst);

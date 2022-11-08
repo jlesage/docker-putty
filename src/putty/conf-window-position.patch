@@ -1,0 +1,18 @@
+Move the initial configuration window to the top left corner to make sure it
+remains visible on screen size changes.  When the container starts, there is a
+default screen size that might change once the user open the UI via a web
+browser.
+--- a/unix/dialog.c	2022-11-07 23:13:34.269140219 -0500
++++ b/unix/dialog.c	2022-11-07 23:13:54.935597888 -0500
+@@ -3285,7 +3285,11 @@
+                                    GTK_POLICY_AUTOMATIC);
+     gtk_widget_show(tree);
+ 
++#if 1 // Move the window to the top left corner to make sure it remains visible on window size changes.
++    gtk_window_move(GTK_WINDOW(window), 20, 20);
++#else
+     gtk_window_set_position(GTK_WINDOW(window), GTK_WIN_POS_CENTER);
++#endif
+     gtk_widget_show(window);
+ 
+     /*

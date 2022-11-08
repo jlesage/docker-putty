@@ -1,0 +1,27 @@
+Remove elements from the "ctrl+right click" menu that create a new terminal
+window.
+--- a/unix/window.c	2022-11-07 22:43:12.703088650 -0500
++++ b/unix/window.c	2022-11-08 12:34:44.400503397 -0500
+@@ -5542,11 +5546,14 @@
+             gtk_widget_show(menuitem);                                  \
+         } while (0)
+ 
++#if 0
+         if (new_session)
+             MKMENUITEM("New Session...", new_session_menuitem);
++#endif
+         MKMENUITEM("Restart Session", restart_session_menuitem);
+         inst->restartitem = menuitem;
+         gtk_widget_set_sensitive(inst->restartitem, false);
++#if 0
+         MKMENUITEM("Duplicate Session", dup_session_menuitem);
+         if (saved_sessions) {
+             inst->sessionsmenu = gtk_menu_new();
+@@ -5556,6 +5563,7 @@
+             gtk_menu_item_set_submenu(GTK_MENU_ITEM(menuitem),
+                                       inst->sessionsmenu);
+         }
++#endif
+         MKSEP();
+         MKMENUITEM("Change Settings...", change_settings_menuitem);
+         MKSEP();
