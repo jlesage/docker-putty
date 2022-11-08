@@ -69,6 +69,6 @@ RUN \
 LABEL \
       org.label-schema.name="putty" \
       org.label-schema.description="Docker container for PuTTY" \
-      org.label-schema.version="${DOCKER_IMAGE_VERSION:-}" \
+      org.label-schema.version="${DOCKER_IMAGE_VERSION:-unknown}" \
       org.label-schema.vcs-url="https://github.com/jlesage/docker-putty" \
       org.label-schema.schema-version="1.0"
