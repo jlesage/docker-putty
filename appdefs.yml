@@ -23,6 +23,17 @@ app:
     category: "Tools:"
   documentation:
   changelog:
+    - version: 22.11.1
+      date: 2022-11-08
+      changes:
+        - 'Updated PuTTY to version 0.78.'
+        - 'Better integration of the `Restart PuTTY session` button.'
+        - 'Versioning scheme of the Docker image changed to `YY.MM.SEQUENCE`.'
+        - 'Update of the baseimage to version 4.1.5 brings the following new features:'
+        - '2:Multi-arch image support.'
+        - '2:Support for dark mode.'
+        - '2:Support for remote window resize.'
+        - '2:Updated the web UI with a new, simplified and less intrusive look.'
     - version: 1.4.0
       date: 2022-05-30
       changes:
