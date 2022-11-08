@@ -1,0 +1,105 @@
+---
+
+#
+# Definitions for PuTTY docker container.
+#
+# This file is used as data source to generate README.md and unRAID template files
+# from Jinja2 templates.
+#
+
+app:
+  id: 16
+  name: putty
+  friendly_name: PuTTY
+  gui_type: x11
+  project:
+    description: |-
+      PuTTY is a free and open-source terminal emulator, serial console and network file
+      transfer application. It supports several network protocols, including SCP, SSH,
+      Telnet, rlogin, and raw socket connection. It can also connect to a serial port.
+    url: https://www.putty.org
+  unraid:
+    support_url: https://forums.unraid.net/topic/73494-support-putty/
+    category: "Tools:"
+  documentation:
+  changelog:
+    - version: 1.4.0
+      date: 2022-05-30
+      changes:
+        - 'Updated PuTTY to version 0.77.'
+    - version: 1.3.1
+      date: 2022-02-10
+      changes:
+        - 'Fixed missing icons in settings window.'
+        - 'Now using baseimage version 3.5.8, based on Alpine 3.14, which brings the following change:'
+        - '2:Updated installed packages to get latest security fixes.'
+    - version: 1.3.0
+      date: 2021-07-17
+      changes:
+        - 'Updated PuTTY to version 0.76.'
+    - version: 1.2.0
+      date: 2021-05-10
+      changes:
+        - 'Updated PuTTY to version 0.75.'
+    - version: 1.1.1
+      date: 2021-04-13
+      changes:
+        - 'Now using baseimage version 3.5.7, which brings the following change:'
+        - '2:Updated installed packages to get latest security fixes.'
+    - version: 1.1.0
+      date: 2021-01-04
+      changes:
+        - 'Added dialog window to easily restart the PuTTY session.'
+        - 'Updated baseimage to version 3.5.6, which brings the following changes:'
+        - '2:Other small adjustments for the YAD log monitor target.'
+    - version: 1.0.5
+      date: 2020-07-19
+      changes:
+        - 'Upgraded PuTTY to version 0.74.'
+        - 'Now using baseimage v3.5.5, based on Alpine 3.12, which brings the following changes:'
+        - '2:Upgraded glibc to version 2.31 on Alpine Linux images with glibc integrated.'
+        - '2:Updated installed packages to get latest security fixes.'
+        - '2:Adjusted the log monitor target for recent versions of YAD.'
+    - version: 1.0.4
+      date: 2019-09-30
+      changes:
+        - 'Upgraded PuTTY to version 0.73.'
+    - version: 1.0.3
+      date: 2019-08-12
+      changes:
+        - 'Upgraded PuTTY to version 0.72.'
+    - version: 1.0.2
+      date: 2019-04-25
+      changes:
+        - 'Upgraded PuTTY to version 0.71.'
+        - 'Now using baseimage v3.5.2, which brings the following changes:'
+        - '2:Updated installed packages to get latest security fixes.'
+        - '2:Fixed issue where the container could have a zombie process.'
+        - '2:Fixed issue where the password would not be submitted when pressing the enter key in the password modal.'
+        - '2:Use relative path for favicon ressources to be more friendly with reverse proxy senarios.'
+    - version: 1.0.1
+      date: 2018-09-18
+      changes:
+        - 'Now using baseimage v3.5.1, which brings the following changes:'
+        - '2:Updated installed packages to get latest security fixes.'
+    - version: 1.0.0
+      date: 2018-08-15
+      changes:
+        - 'Initial release.'
+
+container:
+  rough_download_size: 50MB
+  unsupported_volume:
+    - /storage
+
+  # Environment variables.
+  environment_variables: []
+
+  # Volumes
+  volumes: []
+
+  # Network ports
+  ports: []
+
+  # Devices
+  devices: []
