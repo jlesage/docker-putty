@@ -75,7 +75,6 @@ log "Configuring PuTTY..."
 
 log "Patching PuTTY..."
 find /tmp/putty
-patch -d /tmp/putty -p1 < "$SCRIPT_DIR"/terminal-window-class.patch
 patch -d /tmp/putty -p1 < "$SCRIPT_DIR"/conf-window-position.patch
 patch -d /tmp/putty -p1 < "$SCRIPT_DIR"/ctrl-right-menu.patch
 patch -d /tmp/putty -p1 < "$SCRIPT_DIR"/restart-putty-button.patch
