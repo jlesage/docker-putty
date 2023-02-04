@@ -107,7 +107,6 @@ app:
         - 'Initial release.'
 
 container:
-  rough_download_size: 50MB
   unsupported_volume:
     - /storage
 
