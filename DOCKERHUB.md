@@ -8,7 +8,7 @@ installation or configuration needed on the client side) or via any VNC client.
 
 ---
 
-[![PuTTY logo](https://images.weserv.nl/?url=raw.githubusercontent.com/jlesage/docker-templates/master/jlesage/images/putty-icon.png&w=200)](https://www.putty.org)[![PuTTY](https://images.placeholders.dev/?width=160&height=110&fontFamily=Georgia,sans-serif&fontWeight=400&fontSize=52&text=PuTTY&bgColor=rgba(0,0,0,0.0)&textColor=rgba(121,121,121,1))](https://www.putty.org)
+[![PuTTY logo](https://images.weserv.nl/?url=raw.githubusercontent.com/jlesage/docker-templates/master/jlesage/images/putty-icon.png&w=110)](https://www.putty.org)[![PuTTY](https://images.placeholders.dev/?width=160&height=110&fontFamily=Georgia,sans-serif&fontWeight=400&fontSize=52&text=PuTTY&bgColor=rgba(0,0,0,0.0)&textColor=rgba(121,121,121,1))](https://www.putty.org)
 
 PuTTY is a free and open-source terminal emulator, serial console and network file
 transfer application. It supports several network protocols, including SCP, SSH,
