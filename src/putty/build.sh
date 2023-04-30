@@ -50,7 +50,7 @@ xx-apk --no-cache --no-scripts add \
 
 log "Downloading PuTTY package..."
 mkdir /tmp/putty
-curl -# -L ${PUTTY_URL} | tar xz --strip 1 -C /tmp/putty
+curl -# -L -f ${PUTTY_URL} | tar xz --strip 1 -C /tmp/putty
 
 #
 # Compile PuTTY
