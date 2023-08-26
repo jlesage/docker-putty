@@ -17,7 +17,7 @@ ARG PUTTY_URL=https://the.earth.li/~sgtatham/putty/${PUTTY_VERSION}/putty-${PUTT
 FROM --platform=$BUILDPLATFORM tonistiigi/xx AS xx
 
 # Build PuTTY.
-FROM --platform=$BUILDPLATFORM alpine:3.16 AS putty
+FROM --platform=$BUILDPLATFORM alpine:3.18 AS putty
 ARG TARGETPLATFORM
 ARG PUTTY_URL
 COPY --from=xx / /
@@ -34,7 +34,7 @@ RUN xx-verify \
     /tmp/putty-install/usr/bin/pterm
 
 # Pull base image.
-FROM jlesage/baseimage-gui:alpine-3.16-v4.4.2
+FROM jlesage/baseimage-gui:alpine-3.18-v4.4.2
 
 ARG PUTTY_VERSION
 ARG DOCKER_IMAGE_VERSION
