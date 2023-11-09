@@ -12,6 +12,7 @@ app:
   name: putty
   friendly_name: PuTTY
   gui_type: x11
+  base_os: alpine
   project:
     description: |-
       PuTTY is a free and open-source terminal emulator, serial console and network file
