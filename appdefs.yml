@@ -24,6 +24,10 @@ app:
     category: "Tools:"
   documentation:
   changelog:
+    - version: 23.12.1
+      date: 2023-12-18
+      changes:
+        - 'Updated PuTTY to version 0.80.'
     - version: 23.11.2
       date: 2023-11-19
       changes:
