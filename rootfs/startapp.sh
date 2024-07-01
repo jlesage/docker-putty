@@ -37,3 +37,5 @@ do
 
     rm /tmp/.puttty_restart_requested
 done
+
+# vim:ft=sh:ts=4:sw=4:et:sts=4
