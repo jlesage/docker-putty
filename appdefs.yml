@@ -24,6 +24,10 @@ app:
     category: "Tools:"
   documentation:
   changelog:
+    - version: 24.08.1
+      date: 2024-08-20
+      changes:
+        - 'Fixed terminal window not being maximized.'
     - version: 24.07.1
       date: 2024-07-04
       changes:
