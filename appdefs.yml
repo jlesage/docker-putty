@@ -24,6 +24,10 @@ app:
     category: "Tools:"
   documentation:
   changelog:
+    - version: 24.11.1
+      date: 2024-11-19
+      changes:
+        - 'Fixed display issue that was occurring past the configuration window.'
     - version: 24.09.1
       date: 2024-09-29
       changes:
