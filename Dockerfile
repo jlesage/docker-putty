@@ -34,7 +34,7 @@ RUN xx-verify \
     /tmp/putty-install/usr/bin/pterm
 
 # Pull base image.
-FROM jlesage/baseimage-gui:alpine-3.20-v4.7.1
+FROM jlesage/baseimage-gui:alpine-3.20-v4.8.0
 
 ARG PUTTY_VERSION
 ARG DOCKER_IMAGE_VERSION
