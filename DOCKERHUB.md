@@ -12,6 +12,8 @@ This is a Docker container for [PuTTY](https://www.putty.org).
 The graphical user interface (GUI) of the application can be accessed through a
 modern web browser, requiring no installation or configuration on the client
 
+> This Docker container is entirely unofficial and not made by the creators of PuTTY.
+
 ---
 
 [![PuTTY logo](https://images.weserv.nl/?url=raw.githubusercontent.com/jlesage/docker-templates/master/jlesage/images/putty-icon.png&w=110)](https://www.putty.org)[![PuTTY](https://images.placeholders.dev/?width=160&height=110&fontFamily=monospace&fontWeight=400&fontSize=52&text=PuTTY&bgColor=rgba(0,0,0,0.0)&textColor=rgba(121,121,121,1))](https://www.putty.org)
