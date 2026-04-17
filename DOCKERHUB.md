@@ -8,7 +8,7 @@
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg?style=for-the-badge)](https://paypal.me/JocelynLeSage)
 
 This project provides a lightweight and secure Docker container for
-[PuTTY](https://www.putty.org).
+[PuTTY](https://putty.software).
 
 Access the application's full graphical interface directly from any modern web
 browser - no downloads, installs, or setup required on the client side - or
@@ -23,7 +23,7 @@ shell, desktop notifications, and more.
 
 ---
 
-[![PuTTY logo](https://images.weserv.nl/?url=raw.githubusercontent.com/jlesage/docker-templates/master/jlesage/images/putty-icon.png&w=110)](https://www.putty.org)[![PuTTY](https://images.placeholders.dev/?width=160&height=110&fontFamily=monospace&fontWeight=400&fontSize=52&text=PuTTY&bgColor=rgba(0,0,0,0.0)&textColor=rgba(121,121,121,1))](https://www.putty.org)
+[![PuTTY logo](https://images.weserv.nl/?url=raw.githubusercontent.com/jlesage/docker-templates/master/jlesage/images/putty-icon.png&w=110)](https://putty.software)[![PuTTY](https://images.placeholders.dev/?width=160&height=110&fontFamily=monospace&fontWeight=400&fontSize=52&text=PuTTY&bgColor=rgba(0,0,0,0.0)&textColor=rgba(121,121,121,1))](https://putty.software)
 
 PuTTY is a free and open-source terminal emulator, serial console and network file
 transfer application. It supports several network protocols, including SCP, SSH,
