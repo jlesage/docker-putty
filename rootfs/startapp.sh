@@ -16,8 +16,7 @@ kill_putty() {
     exit $RC
 }
 
-export HOME=/config
-cd "$HOME"
+cd /config
 
 while true
 do
